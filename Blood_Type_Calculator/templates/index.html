@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Type Calculator 🩸</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        h1 {
+            color: #d9534f;
+            margin-bottom: 1.5rem;
+        }
+        .calculator-section {
+            margin-bottom: 2rem;
+            border-top: 1px solid #eee;
+            padding-top: 1.5rem;
+        }
+        h2 {
+            margin-top: 0;
+            color: #337ab7;
+        }
+        select, button {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #337ab7;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #286090;
+        }
+        .parent-selectors {
+            display: flex;
+            gap: 1rem;
+        }
+        .result {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #e9f5e9;
+            border: 1px solid #b3d9b3;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #3c763d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Blood Type Calculator 🩸</h1>
+
+        <div class="calculator-section">
+            <h2>Predict Child's Blood Type</h2>
+            <form method="POST">
+                <div class="parent-selectors">
+                    <select name="parent1" required>
+                        <option value="" disabled selected>Parent 1</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                    </select>
+                    <select name="parent2" required>
+                        <option value="" disabled selected>Parent 2</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                    </select>
+                </div>
+                <button type="submit" name="action" value="predict_child">Calculate</button>
+                {% if child_result %}
+                    <div class="result">{{ child_result }}</div>
+                {% endif %}
+            </form>
+        </div>
+
+        <div class="calculator-section">
+            <h2>Who Can I Receive Blood From?</h2>
+            <form method="POST">
+                <select name="recipient" required>
+                    <option value="" disabled selected>Your Blood Type (Recipient)</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                    <option value="O">O</option>
+                </select>
+                <button type="submit" name="action" value="find_donors">Find Donors</button>
+                {% if donor_result %}
+                    <div class="result">{{ donor_result }}</div>
+                {% endif %}
+            </form>
+        </div>
+
+        <div class="calculator-section">
+            <h2>Who Can I Donate Blood To?</h2>
+            <form method="POST">
+                <select name="donor" required>
+                    <option value="" disabled selected>Your Blood Type (Donor)</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                    <option value="O">O</option>
+                </select>
+                <button type="submit" name="action" value="find_recipients">Find Recipients</button>
+                {% if recipient_result %}
+                    <div class="result">{{ recipient_result }}</div>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</body>
+</html>
