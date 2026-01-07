@@ -5,6 +5,7 @@ Key Features
 
   1.**🧬 Child Blood Type Prediction:**
     - Calculates possible child blood types based on parents' phenotypes.
+
     - Implements **Genotype Mapping** (e.g., Type A = AA or AO) to simulate Punnett Square logic.
     
   2.**🏥 Transfusion Compatibility:**
