@@ -38,4 +38,5 @@ Screenshot
 
 <img width="830" height="582" alt="image" src="https://github.com/user-attachments/assets/fe5c200e-9cbf-4a13-be56-be8a0530e78e" />
 
+
 **Disclaimer:** This tool is for educational purposes only. For medical advice, please consult a professional.
