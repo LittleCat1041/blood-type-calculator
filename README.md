@@ -2,9 +2,11 @@
 A web-based application built with Python Flask. Features include child blood type prediction based on parental genetics and donor/recipient compatibility checks.
 
 Key Features
+
   1.**🧬 Child Blood Type Prediction:**
     - Calculates possible child blood types based on parents' phenotypes.
     - Implements **Genotype Mapping** (e.g., Type A = AA or AO) to simulate Punnett Square logic.
+    
   2.**🏥 Transfusion Compatibility:**
     - **Donor Check:** Finds who can donate blood to a specific recipient.
     - **Recipient Check:** Finds who can receive blood from a specific donor.
