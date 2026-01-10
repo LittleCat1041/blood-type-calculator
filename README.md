@@ -17,7 +17,7 @@ Tech Stack
 How to Run
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/LittleCat1041/blood-type-calculator.git](https://github.com/LittleCat1041/blood-type-calculator.git)
+    git clone https://github.com/LittleCat1041/blood-type-calculator.git
     cd blood-type-calculator
     ```
 
