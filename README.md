@@ -23,6 +23,8 @@ A web-based application built with Python Flask. Features include child blood ty
 2.  **Install dependencies**
     ```bash
     cd blood-type-calculator
+    ```
+    ```bash
     pip install -r requirements.txt
     ```
 
