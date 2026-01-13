@@ -15,12 +15,12 @@ A web-based application built with Python Flask. Features include child blood ty
   - Python (Flask), HTML, CSS
 
 ## How to Run
-1.  **Clone the repository**
+1.  **Clone the Repository**
     ```bash
     git clone https://github.com/LittleCat1041/blood-type-calculator.git
     ```
 
-2.  **Install dependencies**
+2.  **Install Dependencies**
     ```bash
     cd blood-type-calculator
     ```
@@ -28,12 +28,12 @@ A web-based application built with Python Flask. Features include child blood ty
     pip install -r requirements.txt
     ```
 
-3.  **Start the application**
+3.  **Start the Application**
     ```bash
     python app.py
     ```
 
-4.  **Open in browser**
+4.  **Open in Browser**
     * Go to: `http://localhost:5000`
 
 ## Screenshot
